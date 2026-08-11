@@ -63,9 +63,20 @@ export default function Project() {
                 transition={{ duration: 0.45, delay: i * 0.05 }}
               >
                 <h2>{s.h}</h2>
-                <p>
-                  <RichText text={s.p} />
-                </p>
+                {s.p && (
+                  <p>
+                    <RichText text={s.p} />
+                  </p>
+                )}
+                {s.bullets && (
+                  <ul className="detail-list">
+                    {s.bullets.map((b, j) => (
+                      <li key={j}>
+                        <RichText text={b} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </motion.div>
             ))}
           </div>
