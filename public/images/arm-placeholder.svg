@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Robotic arm — render coming soon">
+  <rect width="800" height="600" fill="#0C1116"/>
+  <g fill="none" stroke="#243038" stroke-width="1">
+    <path d="M0 150H800M0 300H800M0 450H800M200 0V600M400 0V600M600 0V600"/>
+  </g>
+  <g stroke="#7FA8BE" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.9">
+    <circle cx="250" cy="430" r="26" fill="#7FA8BE"/>
+    <path d="M250 430 L360 300"/>
+    <circle cx="360" cy="300" r="18" fill="#0C1116"/>
+    <path d="M360 300 L500 250"/>
+    <circle cx="500" cy="250" r="18" fill="#0C1116"/>
+    <path d="M500 250 L560 210"/>
+    <path d="M560 210 l30 -14 M560 210 l30 14" stroke="#E2483D"/>
+  </g>
+  <text x="60" y="90" font-family="Archivo, sans-serif" font-size="46" font-weight="800" fill="#E4E5E1" letter-spacing="-1">ROBOTIC ARM</text>
+  <text x="62" y="540" font-family="'IBM Plex Mono', monospace" font-size="20" fill="#7FA8BE" letter-spacing="2">IN PROGRESS · RENDER COMING</text>
+</svg>
