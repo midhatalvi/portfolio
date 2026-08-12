@@ -16,9 +16,7 @@ export default function Home() {
             </h1>
             <p className="hero-lede">
               I design mechanisms that move, and I make the{" "}
-              <b>electronics and controls</b> behind them actually work. Right
-              now that is an autonomous construction robot. Before it, a 1,000 N
-              rocket engine.
+              <b>electronics and controls</b> behind them actually work.
             </p>
           </div>
         </div>
