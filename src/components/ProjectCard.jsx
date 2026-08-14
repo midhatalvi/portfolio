@@ -4,7 +4,11 @@ export default function ProjectCard({ p }) {
   return (
     <Link to={`/work/${p.slug}`} className="tile projlink">
       <div className="tile-img">
-        <img src={p.image} alt={p.title} />
+        <img
+          src={p.image}
+          alt={p.title}
+          style={p.imgPos ? { objectPosition: p.imgPos } : undefined}
+        />
       </div>
       <div className="tile-body">
         <div className="p-id">{p.eyebrow}</div>

@@ -63,6 +63,8 @@ export const projects = [
     blurb:
       "A personal **robot arm** that reads a **checkers board** and plays its move, built to keep my grandfather's mind sharp. Runs **stereo-vision depth** and **hand-eye calibration** on **OpenCV and Python**.",
     image: "/images/arm.png",
+    // Tile crop framing. 0% = show top, 100% = show bottom. Tweak the number to taste.
+    imgPos: "center 72%",
     hasImage: true,
     tags: ["ROS 2", "SLAM", "OpenCV", "Computer Vision", "Stereo Vision", "Python", "Raspberry Pi 5", "Fusion 360"],
     specs: [
@@ -156,7 +158,7 @@ export const projects = [
     cap: "Rutgers' first liquid rocket engine — a pressure-fed RP-1 / nitrous bipropellant",
     blurb:
       "Rutgers' **first liquid rocket engine**: a **1,000 N** pressure-fed **RP-1 / nitrous** bipropellant. I wrote the **MATLAB sizing code** that set its dimensions.",
-    image: "/images/engine.jpg",
+    image: "/images/engine-assembly.jpg",
     hasImage: true,
     gallery: ["/images/engine.jpg", "/images/engine-assembly.jpg"],
     tags: ["MATLAB", "RPA", "NASA CEA", "Bell Nozzle", "Ablative Cooling"],
