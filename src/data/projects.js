@@ -62,7 +62,7 @@ export const projects = [
     cap: "a vision-guided robot arm built to play checkers with my grandfather",
     blurb:
       "A personal **robot arm** that reads a **checkers board** and plays its move, built to keep my grandfather's mind sharp. Runs **stereo-vision depth** and **hand-eye calibration** on **OpenCV and Python**.",
-    image: "/images/arm-placeholder.svg",
+    image: "/images/arm.png",
     hasImage: true,
     tags: ["ROS 2", "SLAM", "OpenCV", "Computer Vision", "Stereo Vision", "Python", "Raspberry Pi 5", "Fusion 360"],
     specs: [
