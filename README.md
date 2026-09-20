@@ -2,7 +2,7 @@
 
 Personal engineering portfolio for Midhat Alvi (mechanical, robotics, and aerospace). It presents selected work as evidence: renders, specs, and the decisions behind each build.
 
-**Live:** [midhatalvi.vercel.app](https://midhatalvi.vercel.app)
+**Live:** [midhatalvi.com](https://midhatalvi.com)
 
 ## Stack
 
