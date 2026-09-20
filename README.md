@@ -10,7 +10,7 @@ Personal engineering portfolio for Midhat Alvi (mechanical, robotics, and aerosp
 Supervised-autonomous robot that lays commercial floor tile at 3–5× crew output. Custom Fusion 360 body panels, brackets, and end-effectors on a RoboClaw + Arduino control stack with a thinset material-delivery subsystem.
 
 **[Autonomous Checkers-Playing Robot Arm](https://midhatalvi.com/work/arm)**
-4-DOF vision-guided arm that reads a checkers board and plays its move using stereo-vision depth and hand-eye calibration on OpenCV and Python (Raspberry Pi 5). Achieves 3.1 mm tip accuracy and 2.7 mm depth error at one meter.
+4-DOF vision-guided arm that reads a checkers board and plays its move using stereo-vision depth and hand-eye calibration on OpenCV and Python (Raspberry Pi 5). In progress: fabricating the arm and building the vision pipeline.
 
 **[Subsonic Open-Circuit Wind Tunnel](https://midhatalvi.com/work/tunnel)**
 6 × 6 in open-return tunnel with an 8:1 Bell–Mehta fifth-order contraction and honeycomb-plus-screen flow conditioning, sized in SolidWorks. Three-level ANSYS Fluent CFD (inviscid, laminar, RANS k-ε) to study Tollmien–Schlichting waves.

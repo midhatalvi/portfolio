@@ -70,9 +70,9 @@ export const projects = [
     specs: [
       ["Architecture", "4 DOF + gripper (5 servos)"],
       ["Reach", "240 mm"],
-      ["Tip accuracy", "3.1 mm (from 4.8 mm)"],
+      ["Tip accuracy", "3.1 mm (target)"],
       ["Shoulder load", "0.95× of budget (no counterbalance)"],
-      ["Depth error", "2.7 mm at 1 m"],
+      ["Depth error", "2.7 mm at 1 m (target)"],
       ["Compute", "Raspberry Pi 5 (4GB) + Fusion HAT+"],
       ["Cameras", "2× Arducam OV5647, 54° stereo"],
       ["Depth method", "OpenCV SGBM"],
@@ -92,8 +92,8 @@ export const projects = [
       {
         h: "Engineering highlights",
         bullets: [
-          "Redesigned the arm from **6 DOF to 4 DOF**, bringing it within the servo torque budget without a counterbalance and improving tip accuracy to **3.1 mm**, precise enough to pick a single checkers piece.",
-          "Achieved **2.7 mm stereo depth error at one meter** using inexpensive cameras and **OpenCV**, outperforming a $200 synced-camera bundle.",
+          "Redesigned the arm from **6 DOF to 4 DOF**, bringing it within the servo torque budget without a counterbalance and targeting **3.1 mm** tip accuracy, precise enough to pick a single checkers piece.",
+          "Selected a **54° stereo camera pair** with **OpenCV**, targeting **2.7 mm depth error at one meter** versus 3.6 mm from a $200 synced-camera bundle.",
           "Designed the full build to come in **under $237**.",
         ],
       },
