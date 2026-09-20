@@ -143,6 +143,7 @@ export default function Home() {
           <div className="contact-links">
             <a href="mailto:midhatalvi02@gmail.com">midhatalvi02@gmail.com</a>
             <a href="https://www.linkedin.com/in/midhatalvi/">LinkedIn</a>
+            <a href="https://github.com/midhatalvi">GitHub</a>
             <a href="/resume.pdf">Résumé (PDF)</a>
           </div>
         </div>
