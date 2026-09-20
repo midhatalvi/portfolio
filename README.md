@@ -4,39 +4,16 @@ Personal engineering portfolio for Midhat Alvi (mechanical, robotics, and aerosp
 
 **Live:** [midhatalvi.com](https://midhatalvi.com)
 
-## Stack
+## Projects
 
-- React 18 + Vite 5 (plain JSX)
-- react-router-dom 6 for per-project routes (`/work/:slug`)
-- framer-motion for scroll reveals and transitions
-- Canvas 2D for the animated intro and interactive hero background
+**[TYLER — Autonomous Tiling Robot](https://midhatalvi.com/work/tyler)**
+Supervised-autonomous robot that lays commercial floor tile at 3–5× crew output. Custom Fusion 360 body panels, brackets, and end-effectors on a RoboClaw + Arduino control stack with a thinset material-delivery subsystem.
 
-## Highlights
+**[Autonomous Checkers-Playing Robot Arm](https://midhatalvi.com/work/arm)**
+4-DOF vision-guided arm that reads a checkers board and plays its move using stereo-vision depth and hand-eye calibration on OpenCV and Python (Raspberry Pi 5). Achieves 3.1 mm tip accuracy and 2.7 mm depth error at one meter.
 
-- **IntroGate** — a one-per-load particle intro that assembles the name, then morphs into the live hero heading.
-- **HeroField** — an interactive vertex mesh behind the hero that reacts to the cursor.
-- **Data-driven projects** — every project lives in `src/data/projects.js`; adding one is a single object with its own detail page.
+**[Subsonic Open-Circuit Wind Tunnel](https://midhatalvi.com/work/tunnel)**
+6 × 6 in open-return tunnel with an 8:1 Bell–Mehta fifth-order contraction and honeycomb-plus-screen flow conditioning, sized in SolidWorks. Three-level ANSYS Fluent CFD (inviscid, laminar, RANS k-ε) to study Tollmien–Schlichting waves.
 
-## Local development
-
-```bash
-npm install
-npm run dev      # start the dev server (http://localhost:5173)
-npm run build    # production build to dist/
-npm run preview  # preview the production build
-```
-
-## Structure
-
-```
-src/
-  components/    reusable UI (TopBar, Footer, ProjectCard, IntroGate, HeroField, ...)
-  pages/         Home and Project
-  data/          projects.js — single source of truth for all project content
-  styles.css     global styles
-public/images/   project renders and photos
-```
-
-## Deployment
-
-Hosted on Vercel and connected to this repository, so every push to `main` deploys automatically. Client-side routing is handled by the rewrite in `vercel.json`.
+**[Bi-Propellant Liquid Rocket Engine](https://midhatalvi.com/work/engine)**
+Rutgers' first liquid rocket engine: a 1,000 N pressure-fed RP-1 / nitrous bipropellant with a graphite ablative and film-cooled bell nozzle. Sized in MATLAB with RPA and NASA CEA (195 s Isp, 4:1 O/F).
