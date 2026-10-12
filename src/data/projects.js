@@ -10,9 +10,9 @@ export const projects = [
     title: "TYLER — Autonomous Tiling Robot",
     headline: "3–5×",
     unit: "crew output",
-    cap: "a supervised-autonomous tiling robot that lays commercial floor tile at production scale",
+    cap: "a supervised-autonomous tiling robot placing ceramic, vinyl, and carpet to sub-centimeter accuracy",
     blurb:
-      "The robot I build hardware for at HFR: **body panels, brackets, and end-effectors** in **Fusion 360**, the **RoboClaw + Arduino** control stack, and the **material-delivery** subsystem that keeps thinset flowing.",
+      "The hardware I design across HFR's robot fleet: per-material end-effectors, custom robot bodies, and the RoboClaw control stack, placing flooring to **sub-centimeter accuracy** at roughly **170 sq ft/day**.",
     image: "/images/tyler-black.jpg",
     hasImage: true,
     // Fleet showcase: white TYLER, black TYLER, Wattson box-rover, Wattson puller (2 angles)
@@ -26,27 +26,36 @@ export const projects = [
     tags: ["Fusion 360", "3D Printing", "RoboClaw", "Arduino", "End-Effector", "Harness Fab"],
     specs: [
       ["Machine", "TYLER, autonomous tiling robot"],
-      ["Output", "3–5× tile output per crew"],
-      ["System weight", "88 lb"],
-      ["Footprint", "43 × 15 × 22 in"],
-      ["Tile range", "12 × 12 in to 24 × 24 in"],
-      ["Operation", "Supervised autonomous"],
-      ["Design tools", "Fusion 360, FDM print"],
-      ["Control stack", "RoboClaw + Arduino"],
-      ["What I did", "Mech design + electrical integration"],
+      ["Materials", "Ceramic, vinyl, carpet"],
+      ["End-effectors", "Dedicated design per material"],
+      ["Grip sensing", "Pressure transducer per vacuum cup"],
+      ["Placement", "Sub-centimeter accuracy"],
+      ["Throughput", "~170 sq ft/day, supervised"],
+      ["Actuation", "3 servos (Z, tilt, roll)"],
+      ["Serviceability", "Tyler redesign: 45→15 min (75%)"],
+      ["Fleet", "Tyler (floor), Morty (mortar bed), Wattson (wire)"],
+      ["Design + control", "Fusion 360, RoboClaw, FDM print"],
     ],
     sections: [
       {
-        h: "The problem",
-        p: "Tile installation is slow, physical, and inconsistent from crew to crew. **TYLER** turns it into a **production-level system**, but only if the hardware survives a real jobsite: dust, uneven substrate, and the pace of active construction. That meant every panel, mount, and subsystem had to be **built for fit, manufacturability, and serviceability**, not a lab bench.",
+        h: "The challenge",
+        p: "TYLER places tile and plank to **sub-centimeter accuracy** across ceramic, vinyl, and carpet, and the three grip nothing alike, so each needs its own end-effector. I inherited the ceramic grip and optimized the two that do not cooperate, carpet and vinyl. The hardware also has to survive a real jobsite: dust, uneven substrate, and the pace of active construction.",
       },
       {
-        h: "What I did",
-        p: "I design the robot's **custom body panels, brackets, and mounts in Fusion 360**, 3D print them, and assemble them with off-the-shelf structural components. I integrate the **embedded electrical and control systems** (RoboClaw motor controllers, Arduino, wireless communication, sensors, and power distribution) through wiring, soldering, and harness fabrication. I also design and iterate the **end-effector and material-delivery subsystems**, working the real constraints: alignment accuracy, thinset flow consistency, and mechanical stability.",
+        h: "Ceramic: the suction baseline",
+        p: "Ceramic is rigid, so the inherited vacuum grip seals against it cleanly and never fought me. What I added was a sense of its own hold: I plumbed a **pressure transducer** into the suction line so the robot only lifts once it reads a true seal, and holds instead of dropping a tile when the pull is weak.",
       },
       {
-        h: "Outcome",
-        p: "The robot runs under real construction-site conditions. I run **system-level testing and validation**, identifying and resolving issues in drive performance, communication, and positioning, and I support **pilot deployments and live customer demos**, troubleshooting in real time and translating contractor feedback into design improvements toward field readiness.",
+        h: "Carpet: a client deadline",
+        p: "When a client came to us needing TYLER to place carpet, I had about **two weeks** to take the end-effector from first concept to a finished metal design. Carpet is porous, so the suction that holds ceramic and vinyl could not seal against it, and I pivoted the attachment to a **Velcro grip** on the backing. It held, but the fully 3D-printed structure would not keep the pad flat under load. I root-caused that to a **tolerance stack-up** across several FDM parts plus a printed-to-metal NPT fitting, reasoned that a precision plane does not belong on a printed part, and moved the rigid structure to an off-the-shelf metal frame, keeping only the custom mounts printed and driving Z, tilt, and roll with three servos.",
+      },
+      {
+        h: "Vinyl: killing the warp",
+        p: "Vinyl plank sags, and my first pad was too large, so the suction **warped the plank** enough that the camera could not find the seam. I **shrank the pad** to keep the plank flat, and designed the set-down to tilt and lower together so the plank rolls flat onto the seam instead of slamming a corner down first.",
+      },
+      {
+        h: "Across the fleet",
+        p: "Beyond the end-effector, I design the full physical body of HFR's robots, and because Tyler, Morty, and Wattson are different machines, each gets its own exterior redesigned from the ground up. **Tyler** is the flagship tiling robot I own end to end; **Morty** is its second generation, which extends the platform to laying the mortar bed the tile sets into; and **Wattson** is a different machine entirely, a two-robot wire-pulling system, a feeder and a puller that run electrical wire through a building. My scope is the physical robot: body panels, brackets, and mounts in Fusion 360, 3D printed, and the control box I wire and solder myself. Tyler began as an older inherited model, and I redesigned its body to cut service time **75 percent, from 45 minutes to 15**. With Morty and Wattson I built that lesson in from the start, designing each body so every service point is accessible by default rather than retrofitted.",
       },
     ],
     links: [],
@@ -61,7 +70,7 @@ export const projects = [
     unit: "DOF + gripper",
     cap: "a vision-guided robot arm built to play checkers with my grandfather",
     blurb:
-      "A personal **robot arm** that reads a **checkers board** and plays its move, built to keep my grandfather's mind sharp. Runs **stereo-vision depth** and **hand-eye calibration** on **OpenCV and Python**.",
+      "A personal robot arm that reads a **checkers board** and plays its move, built to keep my grandfather's mind sharp. Runs stereo-vision depth and **hand-eye calibration** on OpenCV and Python.",
     image: "/images/arm.png",
     // Tile crop framing. 0% = show top, 100% = show bottom. Tweak the number to taste.
     imgPos: "center 72%",
@@ -83,23 +92,23 @@ export const projects = [
     sections: [
       {
         h: "Overview",
-        p: "I am building a **vision-guided robot arm** to play **checkers with my grandfather**, giving him an opponent on demand to keep his mind engaged and sharp. The arm reads the board through **stereo cameras**, works out its move, and physically plays it, turning a familiar game into **daily cognitive exercise** and shared time together.",
+        p: "I am building a vision-guided robot arm to play **checkers with my grandfather**, giving him an opponent on demand to keep his mind engaged and sharp. The arm reads the board through stereo cameras, works out its move, and physically plays it, turning a familiar game into daily cognitive exercise and shared time together.",
       },
       {
         h: "How it works",
-        p: "The arm sees in **3D** using a pair of low-cost cameras and **classical computer vision**, locates each piece on the board, and reaches to it with **hand-eye calibration** so it moves exactly where it intends to.",
+        p: "The arm sees in 3D using a pair of low-cost cameras and classical computer vision, locates each piece on the board, and reaches to it with **hand-eye calibration** so it moves exactly where it intends to.",
       },
       {
         h: "Engineering highlights",
         bullets: [
           "Redesigned the arm from **6 DOF to 4 DOF**, bringing it within the servo torque budget without a counterbalance and targeting **3.1 mm** tip accuracy, precise enough to pick a single checkers piece.",
-          "Selected a **54° stereo camera pair** with **OpenCV**, targeting **2.7 mm depth error at one meter** versus 3.6 mm from a $200 synced-camera bundle.",
+          "Selected a 54° stereo camera pair with OpenCV, targeting **2.7 mm** depth error at one meter versus 3.6 mm from a $200 synced-camera bundle.",
           "Designed the full build to come in **under $237**.",
         ],
       },
       {
         h: "Roadmap",
-        p: "Arm assembly, the **stereo depth pipeline**, **hand-eye calibration**, and full **checkers play** against a human, then extending the same platform to **object recognition** and **room mapping** on a mobile base.",
+        p: "Arm assembly, the stereo depth pipeline, hand-eye calibration, and full **checkers play** against a human, then extending the same platform to object recognition and room mapping on a mobile base.",
       },
     ],
     links: [],
@@ -114,7 +123,7 @@ export const projects = [
     unit: "contraction",
     cap: "Bell–Mehta contraction + three-level CFD, built to study Tollmien–Schlichting waves",
     blurb:
-      "A **6 × 6 in**, **open-return** tunnel I designed to study **boundary-layer transition** — with an **8:1 Bell–Mehta** contraction and **three levels of CFD**.",
+      "A **6 × 6 in** open-return tunnel I designed to study boundary-layer transition, with an **8:1** Bell–Mehta contraction and three levels of CFD.",
     image: "/images/tunnel.jpg",
     hasImage: true,
     gallery: ["/images/tunnel.jpg", "/images/tunnel-cfd.jpg"],
@@ -134,15 +143,15 @@ export const projects = [
     sections: [
       {
         h: "The problem",
-        p: "A wind tunnel is only worth building if the flow in the test section is **clean and repeatable**. The target here was hard: hold a **laminar, ≤5 m/s** stream steady enough to grow **Tollmien–Schlichting waves** — the first ripples of turbulence — without the contraction **separating** the boundary layer.",
+        p: "A wind tunnel is only useful if the test-section flow is clean and repeatable. My target was a hard one: a laminar, **5 m/s** stream steady enough to grow **Tollmien–Schlichting waves**, the first ripples of turbulence, without the contraction separating the boundary layer. So I designed the tunnel from requirements and proved it before anyone fabricated a part.",
       },
       {
         h: "What I did",
-        p: "I designed the tunnel end to end: a **6 × 6 in** test section, an **8:1 Bell–Mehta** polynomial contraction to keep the boundary layer attached, a **honeycomb-and-mesh** settling chamber, and a **~6° diffuser** for pressure recovery. I modeled every part in **SolidWorks** for a **modular, 3D-printed and sheet-metal** build, then validated the aerodynamics with **three levels of CFD** in ANSYS — **inviscid, laminar, and RANS k-ε**.",
+        p: "I sized an **8:1** Bell–Mehta contraction to accelerate the flow without separation, a honeycomb-and-mesh settling chamber, and a six-degree diffuser for pressure recovery, modeling every part in SolidWorks. I then validated the aerodynamics with **three levels of CFD** in ANSYS: inviscid, laminar, and RANS k-ε.",
       },
       {
         h: "Outcome",
-        p: "Across all three CFD levels the flow **accelerated cleanly through the contraction**, held a **uniform profile across the test section**, and **decelerated smoothly** through the diffuser with no separation — exactly the **low-disturbance environment** transition research needs. That matters because clean, repeatable flow is the whole precondition for the science: only in a **quiet stream** can you watch a **laminar boundary layer tip into turbulence** and measure those **Tollmien–Schlichting waves** against theory. The output is a **complete, costed, build-ready design** — every part modeled and a **full bill of materials** priced — that becomes a working research instrument the moment it is fabricated, and its next life is a Rutgers lab tool for **boundary-layer transition and CFD-validation** studies.",
+        p: "Across all three levels the flow accelerated cleanly through the contraction, held a uniform profile across the test section, and decelerated without separation, exactly the low-disturbance environment boundary-layer transition research needs. The result is a **build-ready design** that becomes a working research instrument the moment it is fabricated, and its next life is a Rutgers lab tool for boundary-layer transition and CFD-validation studies.",
       },
     ],
     links: [],
@@ -155,9 +164,9 @@ export const projects = [
     title: "Bi-Propellant Liquid Rocket Engine",
     headline: "1,000",
     unit: "N thrust",
-    cap: "Rutgers' first liquid rocket engine — a pressure-fed RP-1 / nitrous bipropellant",
+    cap: "Rutgers' first liquid rocket engine, where I root-caused a sizing discrepancy to the propellant chemistry",
     blurb:
-      "Rutgers' **first liquid rocket engine**: a **1,000 N** pressure-fed **RP-1 / nitrous** bipropellant. I wrote the **MATLAB sizing code** that set its dimensions.",
+      "Rutgers' first liquid rocket engine: a **1,000 N** pressure-fed RP-1 / nitrous bipropellant. When RPA and the team's MATLAB sizing disagreed, I redid the sizing by hand and traced the gap to the **propellant chemistry**.",
     image: "/images/engine-assembly.jpg",
     hasImage: true,
     gallery: ["/images/engine.jpg", "/images/engine-assembly.jpg"],
@@ -172,20 +181,20 @@ export const projects = [
       ["Chamber temp", "2,399 K (NASA CEA)"],
       ["Cooling", "Graphite ablative + film"],
       ["Nozzle", "Bell / parabolic"],
-      ["What I did", "MATLAB sizing + RPA"],
+      ["My role", "Root-caused sizing: hand calc + RPA/CEA"],
     ],
     sections: [
       {
         h: "The problem",
-        p: "A liquid engine lives or dies on **heat and geometry**. Pick the wrong **oxidizer-to-fuel ratio** or throat size and the **2,400 K** chamber melts, or the thrust never reaches target. This was also **Rutgers' first-ever liquid rocket engine**, so there was no in-house playbook to copy.",
+        p: "For Rutgers' first liquid rocket engine, a **1,000 N** RP-1 and nitrous design, RPA and NASA CEA disagreed with a teammate's MATLAB sizing even though both came from the same reference, and the entire chamber geometry depended on resolving it. The project lead asked me to step in.",
       },
       {
         h: "What I did",
-        p: "I built the **MATLAB sizing code** that turned the **1,000 N** thrust target into real engine dimensions — the **throat, chamber, and bell nozzle** — and validated every value against **RPA** (Rocket Propulsion Analysis). The nozzle-geometry figure comes straight out of that sizing work.",
+        p: "I redid the full sizing by hand and traced the gap to the **propellant chemistry**: the MATLAB had used generic online values, while the real RP-1 and nitrous reaction differs. I re-derived the combustion products from a balanced stoichiometric equation that RPA needs stated explicitly.",
       },
       {
         h: "Outcome",
-        p: "The sizing code converged on a buildable, **pressure-fed RP-1 / nitrous** design with **graphite ablative + film cooling**, a **4:1** O/F ratio, and a **195 s** specific impulse. The design cleared its critical design review and set up the **cold-flow and hot-fire** test campaign.",
+        p: "With the corrected chemistry, the hand calculation and RPA converged and the sizing closed: a **4:1** oxidizer-to-fuel ratio and roughly **195 s** specific impulse, with graphite ablative and film cooling. The design cleared its critical design review.",
       },
     ],
     links: [],
