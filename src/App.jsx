@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import TopBar from "./components/TopBar.jsx";
 import Footer from "./components/Footer.jsx";
 import IntroGate from "./components/IntroGate.jsx";
@@ -25,6 +26,7 @@ export default function App() {
       <TopBar />
       <Outlet />
       <Footer />
+      <Analytics />
     </>
   );
 }
