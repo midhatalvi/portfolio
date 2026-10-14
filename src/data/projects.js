@@ -5,9 +5,9 @@
 export const projects = [
   {
     slug: "tyler",
-    eyebrow: "PROFESSIONAL · 2026 · Robotics",
+    eyebrow: "Professional · 2026 · Robotics",
     org: "Human Friendly Robotics",
-    title: "TYLER — Autonomous Tiling Robot",
+    title: "TYLER, autonomous tiling robot",
     headline: "3–5×",
     unit: "crew output",
     cap: "a supervised-autonomous tiling robot placing ceramic, vinyl, and carpet to sub-centimeter accuracy",
@@ -63,9 +63,9 @@ export const projects = [
 
   {
     slug: "arm",
-    eyebrow: "PERSONAL · 2026 · Robotics",
+    eyebrow: "Personal · 2026 · Robotics",
     org: "Personal project",
-    title: "Autonomous Checkers-Playing Robot Arm (In Progress)",
+    title: "Autonomous checkers-playing robot arm (in progress)",
     headline: "4",
     unit: "DOF + gripper",
     cap: "a vision-guided robot arm built to play checkers with my grandfather",
@@ -91,7 +91,7 @@ export const projects = [
     ],
     sections: [
       {
-        h: "Overview",
+        h: "Why I'm building it",
         p: "I am building a vision-guided robot arm to play **checkers with my grandfather**, giving him an opponent on demand to keep his mind engaged and sharp. The arm reads the board through stereo cameras, works out its move, and physically plays it, turning a familiar game into daily cognitive exercise and shared time together.",
       },
       {
@@ -99,7 +99,7 @@ export const projects = [
         p: "The arm sees in 3D using a pair of low-cost cameras and classical computer vision, locates each piece on the board, and reaches to it with **hand-eye calibration** so it moves exactly where it intends to.",
       },
       {
-        h: "Engineering highlights",
+        h: "Engineering decisions",
         bullets: [
           "Redesigned the arm from **6 DOF to 4 DOF**, bringing it within the servo torque budget without a counterbalance and targeting **3.1 mm** tip accuracy, precise enough to pick a single checkers piece.",
           "Selected a 54° stereo camera pair with OpenCV, targeting **2.7 mm** depth error at one meter versus 3.6 mm from a $200 synced-camera bundle.",
@@ -116,9 +116,9 @@ export const projects = [
 
   {
     slug: "tunnel",
-    eyebrow: "M.ENG PROJECT · 2025 · Aerodynamics",
+    eyebrow: "M.Eng project · 2025 · Aerodynamics",
     org: "Rutgers · M.Eng (sole author)",
-    title: "Subsonic Open-Circuit Wind Tunnel",
+    title: "Subsonic open-circuit wind tunnel",
     headline: "8:1",
     unit: "contraction",
     cap: "Bell–Mehta contraction + three-level CFD, built to study Tollmien–Schlichting waves",
@@ -142,15 +142,15 @@ export const projects = [
     ],
     sections: [
       {
-        h: "The problem",
+        h: "A hard flow target",
         p: "A wind tunnel is only useful if the test-section flow is clean and repeatable. My target was a hard one: a laminar, **5 m/s** stream steady enough to grow **Tollmien–Schlichting waves**, the first ripples of turbulence, without the contraction separating the boundary layer. So I designed the tunnel from requirements and proved it before anyone fabricated a part.",
       },
       {
-        h: "What I did",
+        h: "Designing from requirements",
         p: "I sized an **8:1** Bell–Mehta contraction to accelerate the flow without separation, a honeycomb-and-mesh settling chamber, and a six-degree diffuser for pressure recovery, modeling every part in SolidWorks. I then validated the aerodynamics with **three levels of CFD** in ANSYS: inviscid, laminar, and RANS k-ε.",
       },
       {
-        h: "Outcome",
+        h: "What the CFD showed",
         p: "Across all three levels the flow accelerated cleanly through the contraction, held a uniform profile across the test section, and decelerated without separation, exactly the low-disturbance environment boundary-layer transition research needs. The result is a **build-ready design** that becomes a working research instrument the moment it is fabricated, and its next life is a Rutgers lab tool for boundary-layer transition and CFD-validation studies.",
       },
     ],
@@ -159,9 +159,9 @@ export const projects = [
 
   {
     slug: "engine",
-    eyebrow: "CAPSTONE · 2023–24 · Propulsion",
+    eyebrow: "Capstone · 2023–24 · Propulsion",
     org: "Rutgers · Senior Design (5-person team)",
-    title: "Bi-Propellant Liquid Rocket Engine",
+    title: "Bi-propellant liquid rocket engine",
     headline: "1,000",
     unit: "N thrust",
     cap: "Rutgers' first liquid rocket engine, where I root-caused a sizing discrepancy to the propellant chemistry",
@@ -185,15 +185,15 @@ export const projects = [
     ],
     sections: [
       {
-        h: "The problem",
+        h: "A sizing that didn't agree",
         p: "For Rutgers' first liquid rocket engine, a **1,000 N** RP-1 and nitrous design, RPA and NASA CEA disagreed with a teammate's MATLAB sizing even though both came from the same reference, and the entire chamber geometry depended on resolving it. The project lead asked me to step in.",
       },
       {
-        h: "What I did",
+        h: "Tracing it to the chemistry",
         p: "I redid the full sizing by hand and traced the gap to the **propellant chemistry**: the MATLAB had used generic online values, while the real RP-1 and nitrous reaction differs. I re-derived the combustion products from a balanced stoichiometric equation that RPA needs stated explicitly.",
       },
       {
-        h: "Outcome",
+        h: "Convergence, and a cleared review",
         p: "With the corrected chemistry, the hand calculation and RPA converged and the sizing closed: a **4:1** oxidizer-to-fuel ratio and roughly **195 s** specific impulse, with graphite ablative and film cooling. The design cleared its critical design review.",
       },
     ],

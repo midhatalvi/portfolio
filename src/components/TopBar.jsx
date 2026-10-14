@@ -9,7 +9,6 @@ export default function TopBar() {
         </Link>
         <nav className="nav">
           <Link to="/#work">Work</Link>
-          <Link to="/#capabilities">Capabilities</Link>
           <Link to="/#contact" className="keep">
             Contact
           </Link>

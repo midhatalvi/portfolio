@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 export default function ProjectCard({ p }) {
   return (
     <Link to={`/work/${p.slug}`} className="tile projlink">
+      <div className="tile-head">
+        <span>{p.eyebrow}</span>
+      </div>
       <div className="tile-img">
         <img
           src={p.image}
@@ -11,8 +14,8 @@ export default function ProjectCard({ p }) {
         />
       </div>
       <div className="tile-body">
-        <div className="p-id">{p.eyebrow}</div>
         <h3 className="p-title">{p.title}</h3>
+        {p.cap && <p className="tile-cap">{p.cap}</p>}
         <div className="tags">
           {p.tags.map((t) => (
             <span className="tag" key={t}>
@@ -20,7 +23,7 @@ export default function ProjectCard({ p }) {
             </span>
           ))}
         </div>
-        <span className="viewmore">View details →</span>
+        <span className="viewmore">View details</span>
       </div>
     </Link>
   );
